@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♪♪ Transformando ideias em Realizações ♪♪</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script type="text/javascript" src="bootstrap.Js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css.normalize.css">
+    <link rel="stylesheet" href="aula14.css">
+    <link rel="stylesheet" href="aula14.js">
+    <link rel="icon" href="imagens/logo nova.png">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do corpo */
+        body {
+            font-family:cursive;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+
+        /* Estilo do cabeçalho */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .header_logo {
+            height: 60px;   
+            padding-right: 20px;
+        }
+
+        .header_nav {
+            display: flex;
+            font-size: 12px;
+        }
+
+        .header_nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header_nav li {
+            margin: 0 10px;
+        }
+
+        .header_nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .header_nav a:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilo da seção principal */
+        .imagem {
+            background-image: url(imagens/main.png);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin: 20px 0;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #button {
+            margin: 20px 0;
+        }
+
+        #button a {
+            text-decoration: none;
+            color: white;
+            background-color: #ebb326;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #button a:hover {
+            background-color: rgba(255, 210, 7);
+        }
+
+        /* Estilo da seção de serviços */
+        #servicos {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        #servicos h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #servicos p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #servicos p .material-icons {
+            margin-right: 10px;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logos_footer {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .logos_footer div {
+            margin: 0 10px;
+        }
+
+        .logos_footer img {
+            max-height: 50px;
+        }
+
+        .texto_footer {
+            color: #666;
+            font-size: 14px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 50px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ebb326;
+        }
+
+        footer p {
+            color: #ddd;
+        }
+
+        .rede-social {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .rede-social img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            background-color: rgb(243, 243, 49);
+            padding: 0px;
+        }
+
+        .price {
+            color: rgb(243, 93, 38);
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+            padding-bottom: 5px;   
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+            color: white;
+            font-size: 10px;
+            padding: 0px;
+        }
+
+        footer img {
+            width: 30px;
+            text-align: center;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .header_nav ul {
+                flex-direction: column;
+            }
+
+            .header_nav li {
+                margin: 5px 0;
+            }
+
+            .imagem {
+                height: 300px;
+            }
+
+            #button a {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            #servicos {
+                padding: 10px;
+            }
+
+            #servicos p {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 30px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+
+            .rede-social img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header_nav ul {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .header_logo {
+                margin-bottom: 10px;
+            }
+
+            .imagem {
+                height: 200px;
+            }
+
+            #button a {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            #servicos p {
+                font-size: 14px;
+            }
+
+            .price {
+                font-size: 24px;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+
+            .rede-social img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="imagens/logo nova.png" alt="" class="header_logo">
+        <span id="hamburguer" class="material-symbols-rounded">
+            menu
+        </span>
+        <nav id="itens_menu" class="header_nav">
+            <ul>
+                <li><a href="#sites">Sites</a></li>
+                <li><a href="#projetos">Projetos Personalizados</a></li>
+                <li><a href="#teatro">Peças Teatrais</a></li>
+                <li><a href="#pesquisa">Pesquisa e Análise</a></li>
+                <li><a href="#educacao">Jogos Interativos</a></li>
+                <li><a href="#contos">Estudo com História</a></li>
+                <li><a href="#curriculo">Currículo</a></li>
+                <li><a href="#escolares">Trabalhos Escolares</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="imagem">
+        <div id="button">
+            <a href="Galeria.html" target="_blank"><b>Galeria</b></a>
+        </div>
+    </main>
+
+    <section id="servicos">
+        <h1>Transformando ideias em Realizações</h1>
+        <p id="sites"><span class="material-icons">web</span>Criação e desenvolvimento de sites modernos, responsivos e funcionais.</p>
+        <p id="projetos"><span class="material-icons">build</span>Desenvolvimento e realização de projetos personalizados para empresas e indivíduos.</p>
+        <p id="teatro"><span class="material-icons">theater_comedy</span>Criação de peças teatrais, elaboração de roteiros, planejamento e direção de peças teatrais (escolares).</p>
+        <p id="pesquisa"><span class="material-icons">search</span>Pesquisa e análise, condução de pesquisa detalhada e produção de relatórios abrangentes.</p>
+        <p id="educacao"><span class="material-icons">school</span>Seu filho está com dificuldade para aprender? Criamos jogos interativos e exercícios com respostas (para crianças e adultos).</p>
+        <p id="contos"><span class="material-icons">menu_book</span>Estudo com história: traga seu assunto e criamos um conto, facilitando o aprendizado de forma divertida para crianças, adolescentes e adultos.</p>
+        <p id="curriculo"><span class="material-icons">assignment</span>Criação de currículo atrativo.</p>
+        <p id="escolares"><span class="material-icons">school</span>Trabalhos escolares em geral.</p>
+        <p id="eventos"><span class="material-icons">event</span>Tem um evento e gostaria de criar brincadeiras divertidas onde todos possam participar, jogos de adivinhação, entre outros? Resolvemos isso para você.</p>
+        <br><p>TRAGA SUA IDÉIA E NÓS AS TRANSFORMAMOS</p>
+        <br></br><p>A PARTIR DE</p>
+        <p class="price"><sup>R$</sup>15,<sup>00</sup></p>
+    </section>
+
+    <h2>Reflexão</h2>
+    <p>Certa manhã, meu pai, muito sábio, convidou-me para dar um passeio no bosque e eu aceitei com prazer.
+        Após algum tempo, ele se deteve numa clareira e, depois de um pequeno silêncio, me perguntou:
+        – Além do canto dos pássaros, você está ouvindo mais alguma coisa?
+        Apurei os ouvidos alguns segundos e respondi:
+        – Estou ouvindo um barulho de carroça. – Isso mesmo – disse meu pai – e é uma carroça vazia!
+        Perguntei a ele:
+        – Como pode saber que a carroça está vazia, se ainda não a vimos?
+        – Ora – respondeu meu pai – é muito fácil saber que uma carroça está vazia por causa do barulho. Quanto mais vazia a carroça, maior é o barulho que faz.
+        Tornei-me adulto e até hoje, quando vejo uma pessoa falando demais, gritando (no sentido de intimidar), tratando o próximo com grosseria inoportuna, prepotente, interrompendo a conversa de todo mundo e querendo demonstrar ser o dono da razão e da verdade absoluta, tenho a impressão de ouvir a voz do meu pai dizendo:
+        – Quanto mais vazia a carroça, mais barulho ela faz!
+        <br>Autor Desconhecido
+    </p>
+
+    <footer>
+        <p>CONTATE-ME</p>
+        <a href="//www.instagram.com/mariazelias1/" target="_blank" class="rede-social"><img src="imagens/instagram.png" alt="Instagram"></a>
+        <a href="//www.linkedin.com/in/maria-zelia-vieira-santos-da-silva-1a541b122/" target="_blank" class="rede-social"><img src="imagens/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://wa.me/5571992976472" target="_blank" class="rede-social"><img src="imagens/whatsapp.png" alt="Whatsapp"></a>
+        <p>ZeliaVieira&copy2024 Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
